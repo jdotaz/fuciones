@@ -78,61 +78,56 @@ char ConvertirMay(char caracter){
 }
 
 int main(){
-  while (true){
+  int num;
+  char cara;
+  int opcion;
+  cout<<"Que desea hacer?:"<<endl<<" 1.Imprimir Digitos"<<endl<<" 2.Contar Digitos"
+  <<endl<<" 3.Palindrome"<<endl<<" 4.Fibonacci"<<endl<<" 5.Test numero"<<endl<<" 6.Test letra"<<endl;
+  cin>>opcion;
 
-    int num;
-    char cara;
-    int opcion;
-    cout<<"Que desea hacer?:"<<endl<<" 1.Imprimir Digitos"<<endl<<" 2.Contar Digitos"
-    <<endl<<" 3.Palindrome"<<endl<<" 4.Fibonacci"<<endl<<" 5.Test numero"<<endl<<" 6.Test letra"<<endl;
-    cin>>opcion;
-    
 
-    if (opcion==1){
-      cout<<"ingrese un numero de 5 digitos: ";
-      cin>>num;
-      ImprimirDigitos(num);
-    }else if(opcion==2){
-      cout<<"ingrese un numero: ";
-      cin>>num;
-      cout<<ContarDigitos(num);
-    }else if(opcion==3){
-      cout<<"Ingrese un numero de 5 digitos que crea que es palindrome: ";
-      cin>>num;
-      if (EsPalindrome(num)){
-        cout<<"Si es palindrome";
-      }else{
-        cout<<"No es palindrome";
-      }
-    }else if(opcion==4){
-      cout<<"Ingrese la posicion de la secuencia Fibonacci que desee obtener: ";
-      cin>>num;
-      cout<<Fibonacci(num);
-    }else if(opcion==5){
-      cout<<"Ingrese el caracter: ";
-      cin>>cara;
-      if (EsNumero(cara)){
-        cout<<"Es un numero";
-      }else{
-        cout<<"No es un numero";
-      }
-    }else if(opcion==6){
-      cout<<"Ingrese el caracter: ";
-      cin>>cara;
-      if (EsLetra(cara)){
-        cout<<"Es una letra y ";
-        if (static_cast<int>(cara)>=65 and static_cast<int>(cara)<=90){
-          cout<<"su minuscula es: "<<ConvertirMin(cara);
-        }else{
-          cout<<"su mayuscula es: "<<ConvertirMay(cara);
-        }
-
-      }else{
-        cout<<"No es una letra";
-      }
+  if (opcion==1){
+    cout<<"ingrese un numero de 5 digitos: ";
+    cin>>num;
+    ImprimirDigitos(num);
+  }else if(opcion==2){
+    cout<<"ingrese un numero: ";
+    cin>>num;
+    cout<<ContarDigitos(num);
+  }else if(opcion==3){
+    cout<<"Ingrese un numero de 5 digitos que crea que es palindrome: ";
+    cin>>num;
+    if (EsPalindrome(num)){
+      cout<<"Si es palindrome";
+    }else{
+      cout<<"No es palindrome";
     }
+  }else if(opcion==4){
+    cout<<"Ingrese la posicion de la secuencia Fibonacci que desee obtener: ";
+    cin>>num;
+    cout<<Fibonacci(num);
+  }else if(opcion==5){
+    cout<<"Ingrese el caracter: ";
+    cin>>cara;
+    if (EsNumero(cara)){
+      cout<<"Es un numero";
+    }else{
+      cout<<"No es un numero";
+    }
+  }else if(opcion==6){
+    cout<<"Ingrese el caracter: ";
+    cin>>cara;
+    if (EsLetra(cara)){
+      cout<<"Es una letra y ";
+      if (static_cast<int>(cara)>=65 and static_cast<int>(cara)<=90){
+        cout<<"su minuscula es: "<<ConvertirMin(cara);
+      }else{
+        cout<<"su mayuscula es: "<<ConvertirMay(cara);
+      }
 
-  system("cls");
+    }else{
+      cout<<"No es una letra";
+    }
   }
   return 0;
 }
